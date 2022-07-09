@@ -9,7 +9,7 @@
 <h1>상품 리스트 출력 예제</h1>
 
 <table border="1">
-    <th>
+    <thead>
         <tr>
             <td>순번</td>
             <td>상품명</td>
@@ -17,8 +17,8 @@
             <td>가격</td>
             <td>상품 등록일</td>
         </tr>
-    </th>
-    <tb>
+    </thead>
+    <tbody>
         <tr th:each="itemDto, status: ${itemDtoList}">
             <td th:text="${status.index}"></td>
             <td th:text="${itemDto.itemNm}"></td>
@@ -26,7 +26,7 @@
             <td th:text="${itemDto.price}"></td>
             <td th:text="${itemDto.regTime}"></td>
         </tr>
-    </tb>
+    </tbody>
 </table>
 
 </body>
