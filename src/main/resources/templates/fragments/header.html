@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
 
 <div th:fragment="header">
     <nav class="navbar navbar-expand-md bg-warning navbar-dark">
@@ -32,8 +33,7 @@
                     <a class="nav-link" href="/members/logout">로그아웃</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0" th:action="@{/}"
-                  method="get">
+            <form class="form-inline my-2 my-lg-0" th:action="@{/}" method="get">
                 <input name="searchQuery" class="form-control mr-sm-2"
                        type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0"
